@@ -36,7 +36,9 @@
       </section>
 
       <!-- playground  -->
-      <section class="flex flex-col justify-around items-center min-h-screen">
+      <section
+        class="flex flex-col justify-around items-center min-h-screen hidden"
+      >
         <!-- ground screen  -->
         <div
           class="artboard artboard-horizontal phone-6 border-[20px] rounded-2xl border-[#010313CC] bg-[#FFFFFFB3]"
@@ -116,7 +118,21 @@
       </section>
 
       <!-- score board  -->
-      <section class=""></section>
+      <section class="flex justify-center items-center min-h-screen">
+        <div class="bg-[#FFFFFF66] p-8 rounded-2xl text-center space-y-6">
+          <h1 class="text-6xl">
+            <span class="font-extrabold">Score : </span>
+            <span class="font-medium">14</span>
+          </h1>
+          <button
+            class="btn text-2xl text-[#010313] font-semibold"
+            type="button"
+          >
+            Play Now
+          </button>
+          <p class="font-medium text-xl">Practice will make you Pro</p>
+        </div>
+      </section>
     </main>
   </body>
 </html>
