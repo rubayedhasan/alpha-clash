@@ -1,7 +1,13 @@
 // hide a section using id
-function hideSection(elementID) {
+// function hideSection(elementID) {
+//   const element = document.getElementById(elementID);
+//   element.classList.add("hidden");
+// }
+
+// add class to element
+function addClassToElement(elementID, addedClass) {
   const element = document.getElementById(elementID);
-  element.classList.add("hidden");
+  element.classList.add(addedClass);
 }
 
 // show a section using id
@@ -24,5 +30,3 @@ function getRandomAlphabet() {
   const alphabet = alphabetsArray[index];
   return alphabet;
 }
-
-// getRandomAlphabet();

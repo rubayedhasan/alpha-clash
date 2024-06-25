@@ -14,12 +14,15 @@ function continueTheGame() {
   //   show the alphabet in playground screen
   const currentAlphabet = document.getElementById("current-alphabet");
   currentAlphabet.innerText = updatedAlphabet;
+
+  //   changing style of matching key
+  addClassToElement(updatedAlphabet, "bg-orange-400");
 }
 
 // function to start the game
 function startPlay() {
   // hide section
-  hideSection("home-screen");
+  addClassToElement("home-screen", "hidden");
 
   //   show element
   shownSection("playground");
