@@ -38,6 +38,9 @@ function startGame() {
   continueTheGame();
 }
 
+// wrong key
+let lastWrongKey = null;
+
 // keyboard key event to type
 document.addEventListener("keyup", function (event) {
   // pressed key from player
@@ -59,6 +62,11 @@ document.addEventListener("keyup", function (event) {
 
   // condition to change game stages
   if (pressedKey === target) {
+    // remove lastWrongKey background
+    if (lastWrongKey) {
+      removeClassFromElement(lastWrongKey, "bg-red-500");
+    }
+
     // update score
     const score = getValueFromElement("your-score");
     const newScore = score + 1;
@@ -78,8 +86,12 @@ document.addEventListener("keyup", function (event) {
     // display the score
     // scoreElement.innerText = newScore;
   } else {
+    if (lastWrongKey && lastWrongKey !== pressedKey) {
+      removeClassFromElement(lastWrongKey, "bg-red-500");
+    }
     removeClassFromElement(target, "bg-orange-400");
     addClassToElement(pressedKey, "bg-red-500");
+    lastWrongKey = pressedKey;
 
     // reduce the life
     const life = getValueFromElement("your-life");
