@@ -25,8 +25,34 @@ function startPlay() {
   addClassToElement("home-screen", "hidden");
 
   //   show element
-  shownSection("playground");
+  removeClassFromElement("playground", "hidden");
 
   //   continue the game
   continueTheGame();
 }
+
+// keyboard key event to type
+document.addEventListener("keyup", function (event) {
+  // pressed key from player
+  const pressedKey = event.key;
+
+  // expected pressed key from user
+  const targetKeyElement = document.getElementById("current-alphabet");
+  const targetKey = targetKeyElement.innerText;
+  const target = targetKey.toLowerCase();
+
+  // condition to change game stages
+  if (pressedKey === target) {
+    removeClassFromElement(target, "bg-orange-400");
+    continueTheGame();
+  } else {
+    addClassToElement(pressedKey, "bg-red-500");
+    removeClassFromElement(target, "bg-orange-400");
+    continueTheGame();
+  }
+  // condition game
+  // if (pressedKey === expectedKey) {
+  //   continueTheGame();
+  // } else {
+  // }
+});

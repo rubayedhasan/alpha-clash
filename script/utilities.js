@@ -11,9 +11,15 @@ function addClassToElement(elementID, addedClass) {
 }
 
 // show a section using id
-function shownSection(elementID) {
+// function shownSection(elementID) {
+//   const element = document.getElementById(elementID);
+//   element.classList.remove("hidden");
+// }
+
+// remove class from element
+function removeClassFromElement(elementID, removedClass) {
   const element = document.getElementById(elementID);
-  element.classList.remove("hidden");
+  element.classList.remove(removedClass);
 }
 
 // generate random alphabets
