@@ -61,6 +61,19 @@ document.addEventListener("keyup", function (event) {
   } else {
     addClassToElement(pressedKey, "bg-red-500");
     removeClassFromElement(target, "bg-orange-400");
+
+    // reduce the life
+    // get the life element
+    const lifeElement = document.getElementById("your-life");
+    const stringTypeLifeValue = lifeElement.innerText;
+    const life = parseInt(stringTypeLifeValue);
+
+    // reduce the life
+    const newLife = life - 1;
+
+    // update the life(display it )
+    lifeElement.innerText = newLife;
+
     continueTheGame();
   }
   // condition game
