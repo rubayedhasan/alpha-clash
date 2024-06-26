@@ -30,7 +30,7 @@
             Unleash Your Keyboard Kung Fu : Press “Enter” to Play
           </p>
           <button
-            onclick="startPlay()"
+            onclick="startGame()"
             class="btn text-2xl text-[#010313] font-semibold"
             type="button"
           >
@@ -52,7 +52,8 @@
             <p
               class="font-medium text-white text-lg bg-[#2F2941] px-4 py-3 rounded-b-xl"
             >
-              Don't watch keyboard while playing...
+              Don't watch keyboard while playing... <br />
+              <strong><small>press 'Escape' to quit the game</small></strong>
             </p>
           </div>
           <p
@@ -113,7 +114,7 @@
           >
             Life
             <img src="images/heart.svg" alt="heart" />
-            <span id="your-life">3</span>
+            <span id="your-life">5</span>
           </button>
           <button
             class="btn font-inter font-medium text-xl text-white bg-[#360490] outline-none border-none"
@@ -133,9 +134,10 @@
         <div class="bg-[#FFFFFF66] p-8 rounded-2xl text-center space-y-6">
           <h1 class="text-6xl">
             <span class="font-extrabold">Score : </span>
-            <span class="font-medium">14</span>
+            <span id="final-score" class="font-medium">14</span>
           </h1>
           <button
+            onclick="startGame()"
             class="btn text-2xl text-[#010313] font-semibold"
             type="button"
           >

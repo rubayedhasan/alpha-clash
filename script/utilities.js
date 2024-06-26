@@ -36,3 +36,24 @@ function getRandomAlphabet() {
   const alphabet = alphabetsArray[index];
   return alphabet;
 }
+
+// get innerText from element
+function getTextValue(elementID) {
+  const element = document.getElementById(elementID);
+  const textValue = element.innerText;
+  return textValue;
+}
+
+// get number value from element
+function getValueFromElement(elementID) {
+  const element = document.getElementById(elementID);
+  const elementStrTypeValue = element.innerText;
+  const value = parseInt(elementStrTypeValue);
+  return value;
+}
+
+// set updated value to element
+function setValueToElement(elementID, addedValue) {
+  const element = document.getElementById(elementID);
+  element.innerText = addedValue;
+}
