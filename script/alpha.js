@@ -44,6 +44,19 @@ document.addEventListener("keyup", function (event) {
   // condition to change game stages
   if (pressedKey === target) {
     removeClassFromElement(target, "bg-orange-400");
+
+    // update score
+    // get the element
+    const scoreElement = document.getElementById("your-score");
+    const stringTypeScore = scoreElement.innerText;
+    const score = parseInt(stringTypeScore);
+
+    // change the score
+    const newScore = score + 1;
+
+    // display the score
+    scoreElement.innerText = newScore;
+
     continueTheGame();
   } else {
     addClassToElement(pressedKey, "bg-red-500");
